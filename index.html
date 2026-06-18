@@ -64,6 +64,8 @@
     .result-body { font-size: 14px; color: #888; font-weight: 300; line-height: 1.6; margin-bottom: 24px; }
     .back-link { display: inline-block; font-size: 13px; color: #aaa; cursor: pointer; margin-top: 16px; text-decoration: none; transition: color 0.15s; }
     .back-link:hover { color: #666; }
+    #prefer-google-link { font-size: 12px; color: #bbb; }
+    #prefer-google-link:hover { color: #888; }
     .footer { margin-top: 24px; font-size: 12px; color: #ccc; }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
     .card { animation: fadeUp 0.4s ease both; }
@@ -132,6 +134,7 @@
       <button type="submit" class="btn btn-primary">Send feedback</button>
     </form>
 
+    <a class="back-link" id="prefer-google-link" href="#" target="_blank" rel="noopener" style="display:block;margin-top:14px;">Prefer to leave a public Google review instead?</a>
     <a class="back-link" onclick="showMain()">← Back</a>
   </div>
 
@@ -145,7 +148,7 @@
 
   const BUSINESS_NAME     = "Vela Studios";
   const BUSINESS_LOGO     = "";
-  const GOOGLE_REVIEW_URL = "https://www.google.com/maps/place/P%26L+Nails+Spa/@51.1819498,-114.1599205,17z/data=!4m18!1m9!3m8!1s0x5371678656def76d:0x2cf31d9de86fc127!2sP%26L+Nails+Spa!8m2!3d51.1819465!4d-114.1573402!9m1!1b1!16s%2Fg%2F11qnsg8_y1!3m7!1s0x5371678656def76d:0x2cf31d9de86fc127!8m2!3d51.1819465!4d-114.1573402!9m1!1b1!16s%2Fg%2F11qnsg8_y1?entry=ttu&g_ep=EgoyMDI2MDUyNy4wIKXMDSoASAFQAw%3D%3D;"
+  const GOOGLE_REVIEW_URL = "https://g.page/r/REPLACE_WITH_CLIENT_REVIEW_LINK/review";
 
   // ★ Point this to your thankyou.html page URL
   const REDIRECT_URL = "https://vitalityhackz1-svg.github.io/Template-5/thankyou.html";
@@ -168,6 +171,7 @@
     }
 
     document.getElementById('google-btn').href      = GOOGLE_REVIEW_URL;
+    document.getElementById('prefer-google-link').href = GOOGLE_REVIEW_URL;
     document.getElementById('form-redirect').value  = REDIRECT_URL;
     document.getElementById('form-business').value  = BUSINESS_NAME;
   })();
@@ -229,3 +233,4 @@
 </script>
 </body>
 </html>
+
